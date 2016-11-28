@@ -1,0 +1,124 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "required":false,
+  "properties":{
+    "pluginLocations": {
+      "type":"object",
+      "required":true,
+      "properties":{
+        "config": {
+          "type":"object"
+        },
+        "course": {
+          "type":"object",
+          "properties":{
+            "_bookmarking": {
+              "type": "object",
+              "required": false,
+              "legend": "Bookmarking",
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "required":true,
+                  "default": true,
+                  "title": "Is enabled",
+                  "inputType": {"type": "Boolean", "options": [true, false]},
+                  "validators": [],
+                  "help": "If set to 'true', bookmarking will be turned on"
+                },
+                "_level": {
+                  "type":"string",
+                  "required":true,
+                  "enum": ["page", "block", "component"],
+                  "default": "page",
+                  "title": "Level",
+                  "inputType": {"type": "Select", "options":["page", "block", "component"]},
+                  "validators": ["required"],
+                  "help": "Select the type of view to which the learner is returned"
+                },
+                "title": {
+                  "type": "string",
+                  "default":"Bookmarking",
+                  "required": false,
+                  "title": "Prompt Title",
+                  "inputType": "Text",
+                  "validators": []
+                },
+                "body": {
+                  "type": "string",
+                  "default":"Bookmarking",
+                  "required": false,
+                  "title": "Prompt Message",
+                  "inputType": "Text",
+                  "validators": []
+                },
+                "_buttons": {
+                  "type":"object",
+                  "title": "Prompt Buttons",
+                  "properties": {
+                    "yes": {
+                      "type": "string",
+                      "default": "Yes",
+                      "title": "",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "no": {
+                      "type": "string",
+                      "default": "No",
+                      "title": "",
+                      "inputType": "Text",
+                      "validators": []
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "contentobject": {
+          "type":"object",
+          "properties":{
+            "_bookmarking": {
+              "type": "object",
+              "required": false,
+              "legend": "Bookmarking",
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "required":true,
+                  "default": true,
+                  "title": "Is enabled",
+                  "inputType": {"type": "Boolean", "options": [true, false]},
+                  "validators": [],
+                  "help": "If set to 'true', bookmarking will be turned on. Overrides bookmark setting for the course."
+                },
+                "_level": {
+                  "type":"string",
+                  "required":true,
+                  "enum": ["page", "block", "component"],
+                  "default": "page",
+                  "title": "Level",
+                  "inputType": {"type": "Select", "options":["page", "block", "component"]},
+                  "validators": ["required"],
+                  "help": "Select the type of view to which the learner is returned"
+                }
+              }
+            }
+          }
+        },
+        "article": {
+          "type":"object"
+        },
+        "block": {
+          "type":"object"
+        },
+        "component": {
+          "type":"object"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "adapt-googleanalytics",
+  "version": "2.0.3",
+  "framework": "^2.0.0",
+  "homepage": "go/sm-eng",
+  "issues": "",
+  "displayName" : "Google analytics",
+  "extension" : "analytics",
+  "description": "A GA extension",
+  "main": "/js/adapt-googleanalytics.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-extension"
+  ],
+  "license": "GPLv3",
+  "targetAttribute": "_analytics"
+}
