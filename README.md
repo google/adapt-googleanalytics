@@ -3,7 +3,7 @@
 
 This is not an official Google product.
 
-This is a simple extension that implements Google Analytics upon post render of pageView, which is triggered when a page's view has rendered.  Be sure to include the Analytics library and Autotrack in core > js > scriptLoader.js.
+This is a simple Adapt extension that implements Google Analytics upon post render of pageView, which is triggered when a page's view has rendered.  Be sure to include the Analytics library and Autotrack in core > js > scriptLoader.js.
 
 Example:
 
